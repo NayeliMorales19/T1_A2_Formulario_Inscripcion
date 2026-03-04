@@ -8,7 +8,8 @@ function Profile() {
   if (!user) {
     return (
       <Container>
-        <p>Loading...</p>
+        <h1>Profile</h1>
+        <p>No hay usuario logueado</p>
       </Container>
     );
   }
