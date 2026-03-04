@@ -6,6 +6,7 @@ import { AuthProvider } from './context/AuthContext';
 
 import Navigation from './components/Navigation';
 import Login from './components/Login';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -14,30 +15,11 @@ function App() {
         <Navigation />
 
         <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                  </p>
-                }
-              />
-              <Route path="/login" element={<Login />} />
-            </Routes>
-
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
+          {/* SOLO el contenido va aquí */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
         </div>
       </Router>
     </AuthProvider>
