@@ -7,6 +7,7 @@ import { AuthProvider } from './context/AuthContext';
 import Navigation from './components/Navigation';
 import Login from './components/Login';
 import Home from './components/Home';
+import Profile from './components/Profile';
 
 function App() {
   return (
@@ -15,11 +16,15 @@ function App() {
         <Navigation />
 
         <div className="App">
-          {/* SOLO el contenido va aquí */}
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-          </Routes>
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/profile" element={<Profile />} />
+            </Routes>
+          </header>
         </div>
       </Router>
     </AuthProvider>
